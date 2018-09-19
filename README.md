@@ -10,11 +10,11 @@ recognition, chin movement tracking when speaking. We employ WARP platform to co
 
 The data locate in the directory /data/.
 
-1. respiration.mat is the human respiration Wi-Fi signal for 1 minute. 
-2. finger1.mat is the Wi-Fi signal for finger gesture *'up'*
-3. finger2.mat is the Wi-Fi signal for finger gesture *'no'*
-4. chin.mat is the Wi-Fi signal for chin movement when speaking *'how are you, I am fine.'*
+1. *respiration.mat* is the human respiration Wi-Fi signal for 1 minute. 
+2. *finger1.mat* is the Wi-Fi signal for finger gesture *'up'*
+3. *finger2.mat* is the Wi-Fi signal for finger gesture *'no'*
+4. *chin.mat* is the Wi-Fi signal for chin movement when speaking *'how are you, I am fine'*. *chin.m4a* is the audio groundtruth, which can be loaded automatically.
 
 # Running the tests
 
-To run the code, you only need to change the variable *fname* to the corresponding dataset name, then run the *main* function.
+To run the code, you only need to change the variable *fname* in Line 6 to the corresponding dataset name, then run the *main* function.
