@@ -16,11 +16,11 @@ g = plotTabHandle([' == plotPC ==  ', fname]);
 
 %% === selected sub-carrier CSI's Amp and Phase Line ===
 for i = 1 : rxNum          % 2 antennas
-    [sp] = plotAddTab1( g, 'Raw(Line)');
+    [sp] = plotAddTab1( g, 'Raw data');
     subplot(sp(1));
-    plotLine(time, abs(rx{1,i}(:,mSub)), 'Raw Amp', ['Amp-rx_',num2str(i)]);
+    plotLine(time, abs(rx{1,i}(:,mSub)), 'Amplitude', ['Amp-rx_',num2str(i)]);
     hold on;
-    plotLineB(time, abs(pc{1,i}(:,mSub)), 'Raw Amp', ['Amp-rx_',num2str(i)]);
+    plotLineB(time, abs(pc{1,i}(:,mSub)), 'Amplitude', ['Amp-rx_',num2str(i)]);
 end
 
 %% === selected sub-carrier CSI's Revised Amp and Phase ===
@@ -31,12 +31,12 @@ for k = 1:12
         subplot(sp(1));
         sAmp = mean(rx{1,i}(:,mSub));
         mPath= 2*sin(phase/2)*sAmp.*exp(-1i*(pi/2+phase/2));
-        plotLine(time, abs(rx{1,i}(:,mSub)+mPath), 'Raw Amp', ['Amp-rx_',num2str(i)]);
+        plotLine(time, abs(rx{1,i}(:,mSub)+mPath), 'Amplitude', ['Amp-rx_',num2str(i)]);
         hold on;
         for l = 1 : 10
            sPc = m_denoise(abs(rx{1,i}(:,mSub)+mPath),samp_rate*smScale);
         end
-        plotLineB(time, sPc, 'Raw Amp', ['Amp-rx_',num2str(i)]);
+        plotLineB(time, sPc, 'Amplitude', ['Amp-rx_',num2str(i)]);
     end
 end
 
@@ -47,7 +47,7 @@ if exist(aufile, 'file')
     auTime  = (1:length(y))/Fs;
     [sp] = plotAddTab1( g, 'Audio');
     subplot(sp(1));
-    plotLine(auTime, y, 'Raw Amp', 'Audio');
+    plotLine(auTime, y, 'Amplitude', 'Audio');
 end
 
 %% end
