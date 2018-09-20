@@ -18,3 +18,5 @@ The data locate in the directory /data/.
 # Running the tests
 
 To run the code, you only need to change the variable *fname* in Line 6 to the corresponding dataset name, then run the *main* function.
+
+If you have any questions, please contact xjtunk@163.com
