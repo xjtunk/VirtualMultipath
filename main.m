@@ -3,7 +3,7 @@ function main()
 clear;
 
 directory   = [pwd,'\data\'];
-fname       = 'respiration.mat';
+fname       = 'chin.mat';
 Rxpath      = [directory, fname];
 samp_rate   = load([Rxpath(1:end-4),'.txt']);
 rxNum       = 1;
